@@ -1,0 +1,135 @@
+Microsoft Windows [Version 10.0.26100.6899]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Acer>cd downloads
+
+C:\Users\Acer\Downloads>mkdir "System Files"
+
+C:\Users\Acer\Downloads>mkdir "Program Files"
+
+C:\Users\Acer\Downloads>echo System File > "System Files\sys.txt"
+
+C:\Users\Acer\Downloads>echo Program File > "Program Files\prog.txt"
+
+C:\Users\Acer\Downloads>icacls "System Files"
+System Files NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+             BUILTIN\Administrators:(I)(OI)(CI)(F)
+             BHLEZZIETOTS\Acer:(I)(OI)(CI)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "Program Files"
+Program Files NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+              BUILTIN\Administrators:(I)(OI)(CI)(F)
+              BHLEZZIETOTS\Acer:(I)(OI)(CI)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "System Files\sys.txt"
+System Files\sys.txt NT AUTHORITY\SYSTEM:(I)(F)
+                     BUILTIN\Administrators:(I)(F)
+                     BHLEZZIETOTS\Acer:(I)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "Program Files\prog.txt"
+Program Files\prog.txt NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BHLEZZIETOTS\Acer:(I)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "System Files" /grant "Acer":(F,M,WDAC)
+processed file: System Files
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "System Files" /grant "Acer":(F,M,WDAC)
+processed file: System Files
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "Program Files" /grant "Acer":(F,M,WDAC)
+processed file: Program Files
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "System Files\sys.txt" /deny "Acer":(D,WDAC)
+processed file: System Files\sys.txt
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "Program Files\prog.txt" /deny "Acer":(D,WDAC)
+processed file: Program Files\prog.txt
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "System Files"
+System Files BHLEZZIETOTS\Acer:(F)
+             NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+             BUILTIN\Administrators:(I)(OI)(CI)(F)
+             BHLEZZIETOTS\Acer:(I)(OI)(CI)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "Program Files"
+Program Files BHLEZZIETOTS\Acer:(F)
+              NT AUTHORITY\SYSTEM:(I)(OI)(CI)(F)
+              BUILTIN\Administrators:(I)(OI)(CI)(F)
+              BHLEZZIETOTS\Acer:(I)(OI)(CI)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "System Files\sys.txt"
+System Files\sys.txt BHLEZZIETOTS\Acer:(DENY)(D,WDAC)
+                     NT AUTHORITY\SYSTEM:(I)(F)
+                     BUILTIN\Administrators:(I)(F)
+                     BHLEZZIETOTS\Acer:(I)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>icacls "Program Files\prog.txt"
+Program Files\prog.txt BHLEZZIETOTS\Acer:(DENY)(D,WDAC)
+                       NT AUTHORITY\SYSTEM:(I)(F)
+                       BUILTIN\Administrators:(I)(F)
+                       BHLEZZIETOTS\Acer:(I)(F)
+
+Successfully processed 1 files; Failed processing 0 files
+
+C:\Users\Acer\Downloads>del "System Files\sys.txt"
+
+C:\Users\Acer\Downloads>del "Program Files\prog.txt"
+
+C:\Users\Acer\Downloads>icacls "System Files\sys.txt" /grant "Acer":(D)
+System Files\sys.txt: The system cannot find the file specified.
+Successfully processed 0 files; Failed processing 1 files
+
+C:\Users\Acer\Downloads>icacls "Program Files\prog.txt" /grant "Acer":(D)
+Program Files\prog.txt: The system cannot find the file specified.
+Successfully processed 0 files; Failed processing 1 files
+
+C:\Users\Acer\Downloads>icacls "System Files\sys.txt"
+System Files\sys.txt: The system cannot find the file specified.
+Successfully processed 0 files; Failed processing 1 files
+
+C:\Users\Acer\Downloads>icacls "Progam Files\prog.txt"
+Progam Files\prog.txt: The system cannot find the path specified.
+Successfully processed 0 files; Failed processing 1 files
+
+C:\Users\Acer\Downloads>wmic logicaldick get name
+logicaldick - Alias not found.
+
+C:\Users\Acer\Downloads>chkdsk C:
+Access Denied as you do not have sufficient privileges or
+the disk may be locked by another process.
+You have to invoke this utility running in elevated mode
+and make sure the disk is unlocked.
+
+C:\Users\Acer\Downloads>chkdsk C: /r
+Access Denied as you do not have sufficient privileges or
+the disk may be locked by another process.
+You have to invoke this utility running in elevated mode
+and make sure the disk is unlocked.
+
+C:\Users\Acer\Downloads>chkdsk C: /f
+Access Denied as you do not have sufficient privileges or
+the disk may be locked by another process.
+You have to invoke this utility running in elevated mode
+and make sure the disk is unlocked.
+
+C:\Users\Acer\Downloads>
